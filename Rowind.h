@@ -45,11 +45,10 @@ private:
 	//*******************************************************************************//
 	// Member Fields               											 
 	//*******************************************************************************//
-public:
-	int TimeOut = 30;		// The max amount of time to wait around for valid
-					// data before giving up in milliseconds.
 private:
 	SoftwareSerial m_Serial;		// Allows the library to read data from the Rowind.
-}
+	int TimeOut;				// The max amount of time to wait around for valid
+						// data before giving up in milliseconds.
+};
 
 #endif

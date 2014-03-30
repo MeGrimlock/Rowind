@@ -66,12 +66,12 @@ bool Rowind::GetData(float& direction, float& speed) {
 		if ( i == 1 )
 		{
 	          	// Inteprets the data as a floating point and then returns the wind direction as a double.
-			m_WindDir = atof( str );
+			direction = atof( str );
 
 		// fourth token contains wind speed
 		}else if ( i == 3 )
 		 {
-			m_WindSpeed= atof( str );
+			speed = atof( str );
 		}
 		i++;
 	}
