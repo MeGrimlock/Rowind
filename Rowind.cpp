@@ -37,8 +37,9 @@ Rowind::Rowind(int rx, int tx)
 
 //=====================================================================
 bool Rowind::IsFunctioning() {
-	if(GetLine() != Null)
+	if(GetLine() != Null) {
 		return true;
+	}
 	return false;
 }
 
@@ -86,7 +87,7 @@ bool Rowind::GetData(float& direction, float& speed) {
 char* Rowind::GetLine() {
 	char line[80];
 	bool gotData = false;
-	float startTime = millis();
+	unsigned long startTime = millis();
 
 	// Search for the correct rowind data line.
 	while(!gotData && startTime > millis() - TimeOut) {

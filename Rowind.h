@@ -21,12 +21,14 @@ class Rowind {
 public:
 	Rowind(int rx, int tx);
 
+	//=====================================================================
 	/**
 	 * Determines if the Rowind is functioning correctly.
 	 * @return Returns true if the rowind is working correctly.
 	 */
 	bool IsFunctioning();
 
+	//=====================================================================
 	/**
 	 * Sets the wind direction into two specified variables.
 	 * @param direction 	Direction of the wind in relation to the boat.
@@ -35,6 +37,7 @@ public:
 	 */
 	bool GetData(float& direction, float& speed);
 private:
+	//=====================================================================
 	/**
 	 * Returns the correct NMEA string to get the wind data from.  This function can
 	 * timeout and return a null pointer if its unable to get any data.
@@ -47,7 +50,7 @@ private:
 	//*******************************************************************************//
 private:
 	SoftwareSerial m_Serial;		// Allows the library to read data from the Rowind.
-	int TimeOut;				// The max amount of time to wait around for valid
+	unsigned int TimeOut;			// The max amount of time to wait around for valid
 						// data before giving up in milliseconds.
 };
 
